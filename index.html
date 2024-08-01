@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+   <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="theme-color" content="#111111">
+   <title>Pay Live</title>
+   <link rel="preload" href="fonts/HarmonyOS_Sans.woff2" as="font" type="font/woff2" crossorigin>
+   <link rel="preload" href="fonts/TTFirsNeue-Bold.woff2" as="font" type="font/woff2" crossorigin>
+   <link rel="preload" href="fonts/HarmonyOS_Sans_Medium.woff2" as="font" type="font/woff2" crossorigin>
+   <link rel="preload" href="fonts/HarmonyOS_Sans_Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+   <link rel="stylesheet" href="css/vendor.css">
+   <link rel="stylesheet" href="css/main.css">
+   <script defer src='libs/vanilaTilt.js'></script>
+   <script defer src='libs/moveParallax.js'></script>
+   <script defer src="js/main.js"></script>
+</head>
+
+   <body class="page__body dora">
+      <div class="site-container">
+         <header class="header">
+  <div class="container header__container">
+    <a href="/" class="logo">
+      <picture>
+        <source media='(max-width: 978px)' srcset='./img/svg/logoShort.svg'>
+        <img src="./img/svg/logo.svg" alt="logo" width='142' height='43' class='img-contain'>
+      </picture>
+    </a>
+    <menu class='menu'>
+      <nav class="nav">
+        <ul class="list-reset nav__list">
+          <li class="nav__item _active">
+            <a href="#" class="nav__link">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Условия</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Тарифы</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__btns">
+        <button class="btn-reset btn-outline">
+          <span>Регистрация</span>
+        </button>
+        <button class="btn-reset btn">
+          <span>Личный кабинет</span>
+        </button>
+      </div>
+    </menu>
+    <button class="btn-reset burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+         <main class="main">
+            <section class="hero">
+    <div class="container hero__container">
+        <div class="star parallax-stars" value='2'>
+            <img src="./img/svg/star.svg" alt="star" width='40' height='40'>
+        </div>
+        <div class="star parallax-stars" value='4'>
+            <img src="./img/svg/star.svg" alt="star" width='40' height='40'>
+        </div>
+        <div class="star parallax-stars" value='-2'>
+            <img src="./img/svg/star.svg" alt="star" width='40' height='40'>
+        </div>
+        <div class="star parallax-stars" value='-3'>
+            <img src="./img/svg/star.svg" alt="star" width='40' height='40'>
+        </div>
+        <div class="hero__content">
+            <h1 class='hero__title'>
+                LinePay<br>
+                Агрегатор платежей
+            </h1>
+            <span class="hero__text">Работа 24/7. Удобное API. Моментальная обработка платежей.</span>
+            <button class="btn-reset btn hero__btn"><span>Подключиться</span></button>
+        </div>
+        <div class="hero__img">
+            <picture>
+                <source srcset="./img/hero.webp" type="image/webp">
+                <img src="./img/hero.png" width="735" height="780" alt="hero">
+            </picture>
+        </div>
+    </div>
+</section>
+            <section class="about">
+    <div class="container about__container">
+        <div class="star parallax-stars" value='2'>
+            <img src="./img/svg/star.svg" alt="star" width='40' height='40'>
+        </div>
+        <h2 class="title about__title">Почему Стоит Использовать<br>Именно Наш Сервис?</h2>
+        <div class="about__items">
+            <div class="about__item card-parallax">
+                <div class="about__img">
+                    <picture>
+                        <source srcset="./img/aboutOne.webp" type="image/webp">
+                        <img loading="lazy" src="./img/aboutOne.png" width="220" height="220" alt="about image">
+                    </picture>
+                </div>
+                <div class="about__content">
+                    <h3 class="about__name">Скорость работы сервиса</h3>
+                    <p class="about__text">Наш сервис моментально обрабатывает входящие платежи в автоматическом режиме, ваше присутствие здесь абсолютно не требуется.</p>
+                </div>
+            </div>
+            <div class="about__item card-parallax">
+                <div class="about__img">
+                    <picture>
+                        <source srcset="./img/aboutTwo.webp" type="image/webp">
+                        <img loading="lazy" src="./img/aboutTwo.png" width="220" height="220" alt="about image">
+                    </picture>
+                </div>
+                <div class="about__content">
+                    <h3 class="about__name">Отзывчивая поддержка</h3>
+                    <p class="about__text">Сотрудники нашей тех.поддержки на связи 24/7. В любой непонятной ситуации мы ответим вам через виджет или Telegram и поможем в решении возникшей проблемы.</p>
+                </div>
+            </div>
+            <div class="about__item card-parallax">
+                <div class="about__img">
+                    <picture>
+                        <source srcset="./img/aboutThree.webp" type="image/webp">
+                        <img loading="lazy" src="./img/aboutThree.png" width="220" height="220" alt="about image">
+                    </picture>
+                </div>
+                <div class="about__content">
+                    <h3 class="about__name">Удобство работы с API</h3>
+                    <p class="about__text">Легкость интеграции — главный критерий. Мы старались сделать документацию максимально понятной и легкой, чтобы вы могли разобраться в ней.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            <section class="statistics">
+    <div class="container statistics__container">
+        <div class="star parallax-stars" value='2'>
+            <img src="./img/svg/star.svg" alt="star" width='40' height='40'>
+        </div>
+        <div class="star parallax-stars" value='4'>
+            <img src="./img/svg/star.svg" alt="star" width='40' height='40'>
+        </div>
+        <h2 class="title statistics__title">Статистика Которой<br>Мы Гордимся</h2>
+        <div class="statistics__items">
+            <div class="statistics__item">
+                <span class="statistics__number">250</span>
+                <p class="statistics__type">Магазинов</p>
+            </div>
+            <div class="statistics__item">
+                <span class="statistics__number">3,075</span>
+                <p class="statistics__type">Клиентов</p>
+            </div>
+            <div class="statistics__item">
+                <span class="statistics__number">371,975</span>
+                <p class="statistics__type">Платежей</p>
+            </div>
+            <div class="statistics__item">
+                <span class="statistics__number">5,254</span>
+                <p class="statistics__type">Выводов</p>
+            </div>
+        </div>
+        <div class="statistics__img">
+            <picture>
+                <source srcset="./img/statistics.webp" type="image/webp">
+                <img loading="lazy" src="./img/statistics.png" class="img-cover" width="450" height="450" alt="statistics image">
+            </picture>
+        </div>
+    </div>
+</section>
+            <section class="news">
+    <div class="container news__container">
+        <div class="star parallax-stars" value='2'>
+            <img src="./img/svg/star.svg" alt="star" width='40' height='40'>
+        </div>
+        <div class="star parallax-stars" value='4'>
+            <img src="./img/svg/star.svg" alt="star" width='40' height='40'>
+        </div>
+        <div class="star parallax-stars" value='-2'>
+            <img src="./img/svg/star.svg" alt="star" width='40' height='40'>
+        </div>
+        <h2 class="title news__title">Наши Последние<br>Новости и Обновления.</h2>
+        <div class="swiper news__slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide news__slide card-parallax">
+                    <span class="news__date">05.07.2024</span>
+                    <p class="news__text">Добрый день, коллеги! Добавили перевод средств между мерчантами (Комиссия от операции 2%).Найти можете в настрой…</p>
+                    <a href="#" class="btn-reset btn-outline news__btn">
+                        <span>Читать источник</span>
+                    </a>
+                </div>
+                <div class="swiper-slide news__slide card-parallax">
+                    <span class="news__date"></span>
+                    <p class="news__text">Работы закончены! Сайт работает в полном объеме</p>
+                    <a href="#" class="btn-reset btn-outline news__btn">
+                        <span>Читать источник</span>
+                    </a>
+                </div>
+                <div class="swiper-slide news__slide card-parallax">
+                    <span class="news__date">13.06.2024</span>
+                    <p class="news__text">Ночные технические работы! Сайт будет недоступен некоторое время</p>
+                    <a href="#" class="btn-reset btn-outline news__btn">
+                        <span>Читать источник</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            <section class="slider">
+    <div class="container slider__container">
+        <div class="star parallax-stars" value='2'>
+            <img src="./img/svg/star.svg" alt="star" width='40' height='40'>
+        </div>
+        <h2 class="title slider__title">Заголовок</h2>
+        <div class="swiper slider__content">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slider__slide">
+                    <div style='width: 100%; aspect-ratio: 0.9313/1;'></div>
+                </div>
+                <div class="swiper-slide slider__slide">
+                    <div style='width: 100%; aspect-ratio: 0.9313/1;'></div>
+                </div>
+                <div class="swiper-slide slider__slide">
+                    <div style='width: 100%; aspect-ratio: 0.9313/1;'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            <section class="blockInfo">
+    <div class="container blockInfo__container">
+        <div class="star parallax-stars" value='2'>
+            <img src="./img/svg/star.svg" alt="star" width='40' height='40'>
+        </div>
+        <div class="star parallax-stars" value='4'>
+            <img src="./img/svg/star.svg" alt="star" width='40' height='40'>
+        </div>
+        <h2 class="title blockInfo__title">Заголовок</h2>
+        <div class="blockInfo__content">
+            <div class="blockInfo__card blockInfo__card-big">
+                <div style='width: 100%; aspect-ratio: 1.6666/1;'></div>
+            </div>
+            <div class="blockInfo__card">
+                <div style='width: 100%; aspect-ratio: 1.2/1;'></div>
+            </div>
+        </div>
+    </div>
+</section>
+            <section class="blockItems">
+    <div class="container blockItems__container">
+        <h2 class="title blockItems__title">Заголовок</h2>
+        <div class="blockItems__elements">
+            <div class="blockItems__element">
+                <div style='width: 100%; aspect-ratio: 1.662/1;'></div>
+            </div>
+            <div class="blockItems__element">
+                <div style='width: 100%; aspect-ratio: 1.662/1;'></div>
+            </div>
+            <div class="blockItems__element">
+                <div style='width: 100%; aspect-ratio: 1.662/1;'></div>
+            </div>
+        </div>
+    </div>
+</section>
+         </main>
+         <footer class="footer">
+  <div class="container footer__container">
+    <a href="/" class="footer__logo">
+      <img src="./img/svg/logoShort.svg" alt="logoShort" width='53' height='45'>
+    </a>
+    <div class="footer__items">
+      <div class="footer__item">
+        <span class='footer__title'>Информация</span>
+        <a href="#" class="footer__link">О системе</a>
+        <a href="#" class="footer__link">Условия</a>
+        <a href="#" class="footer__link">Тарифы</a>
+      </div>
+      <div class="footer__item">
+        <span class='footer__title'>Клиентам</span>
+        <a href="#" class="footer__link">Условия оплаты</a>
+        <a href="#" class="footer__link">Как оплатить?</a>
+      </div>
+      <div class="footer__item">
+        <span class='footer__title'>Подключение</span>
+        <a href="#" class="footer__link">Разработчикам</a>
+        <a href="#" class="footer__link">Тестовый платеж</a>
+        <a href="#" class="footer__link">Баннеры</a>
+      </div>
+      <div class="footer__item">
+        <span class='footer__title'>Наши соц.сети</span>
+        <div class="footer__socials">
+          <a href="#" class="footer__social">
+            <span class='footer__link'>Telegram</span>
+            <img src="./img/svg/vk.svg" alt="vk" width='24' height='24'>
+          </a>
+          <a href="#" class="footer__social">
+            <span class='footer__link'>VK</span>
+            <img src="./img/svg/tg.svg" alt="tg" width='24' height='24'>
+          </a>
+          <a href="#" class="footer__social">
+            <span class='footer__link'>Почта</span>
+            <img src="./img/svg/email.svg" alt="email" width='24' height='24'>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div>
+   </body>
+
+</html>
