@@ -1,5 +1,5 @@
 function hasHover() {
-  return window.matchMedia("(hover: hover)").matches;
+  return window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 }
 
 if (hasHover()) {
