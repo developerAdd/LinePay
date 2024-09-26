@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+    <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="theme-color" content="#111111">
+   <title>Pay Live</title>
+   <link rel="preload" href="fonts/HarmonyOS_Sans.woff2" as="font" type="font/woff2" crossorigin>
+   <link rel="preload" href="fonts/TTFirsNeue-Bold.woff2" as="font" type="font/woff2" crossorigin>
+   <link rel="preload" href="fonts/HarmonyOS_Sans_Medium.woff2" as="font" type="font/woff2" crossorigin>
+   <link rel="preload" href="fonts/HarmonyOS_Sans_Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+   <link rel="stylesheet" href="css/vendor.css">
+   <link rel="stylesheet" href="css/main.css">
+   <script defer src='libs/vanilaTilt.js'></script>
+   <script defer src='libs/moveParallax.js'></script>
+   <script defer src="js/main.js"></script>
+</head>
+
+    <body class="page__body dora">
+        <div class="site-container">
+            <main class='panel container'>
+                <div class="star parallax-stars" value='2'>
+                    <img src="./img/svg/star.svg" alt="star" width='40' height='40'>
+                </div>
+                <div class="star parallax-stars" value='4'>
+                    <img src="./img/svg/star.svg" alt="star" width='40' height='40'>
+                </div>
+                <div class="star parallax-stars" value='-2'>
+                    <img src="./img/svg/star.svg" alt="star" width='40' height='40'>
+                </div>
+
+                <section id='panel__pay' class='panel__content panel__pay'>
+                    <ul class="list-reset panel__methods">
+                        <li class="panel__method">
+                            <img src="./img/svg/visa.svg" alt="visa" width='62' height='21'>
+                        </li>
+                        <li class="panel__method">
+                            <img src="./img/svg/mir.svg" alt="mir" width='71' height='20'>
+                        </li>
+                        <li class="panel__method">
+                            <img src="./img/svg/mastercard.svg" alt="mastercard" width='33' height='20'>
+                        </li>
+                        <li class="panel__method">
+                            <img src="./img/svg/qmoney.svg" alt="mastercard" width='33' height='20'>
+                        </li>
+                        <li class="panel__method">
+                            <img src="./img/svg/sbp.svg" alt="mastercard" width='33' height='20'>
+                        </li>
+                    </ul>
+                    <div class="panel__info">
+                        <div class="panel__summa">
+                            <span class="panel__label">Сумма к переводу</span>
+                            <span class="panel__amount">1 000 ₽</span>
+                            <p class="panel__subtitle">Отправьте точную сумму, иначе оплата не будет произведена</p>
+                        </div>
+                        <div class="panel__timer">
+                            <span class="panel__label">Сумма к переводу</span>
+                            <div class="timer">
+                                <img src="./img/svg/clock.svg" alt="clock" width='33' height='33'>
+                                <span id='timer'>59:58</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel__number">
+                        <span class="panel__name">Номер заказа</span>
+                        <div class="order">
+                            <span>321969</span>
+                            <button class='btn-reset'>
+                                <svg class='copy'>
+                                    <use xlink:href="img/sprite.svg#copy"></use>
+                                </svg>
+                            </button>
+                            <p>Сохраните номер заказа до зачисления средств!</p>
+                        </div>
+                    </div>
+                    <div class="requesites">
+                        <span class="panel__name">Переведите 1000 ₽ на указанный номер телефона</span>
+                        <ul class="list-reset requesites__list">
+                            <li class="requesites__item">
+                                <div class="requesites__icon">
+                                    <img src="./img/svg/card.svg" alt="card" width='25' height='25'>
+                                </div>
+                                <p>4007 8750 1707 4007</p>
+                                <button class='btn-reset'>
+                                    <svg class='copy'>
+                                        <use xlink:href="img/sprite.svg#copy"></use>
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="requesites__item">
+                                <div class="requesites__icon">
+                                    <img src="./img/svg/tel.svg" alt="card" width='25' height='25'>
+                                </div>
+                                <p>+ 7 916 949 5328</p>
+                                <button class='btn-reset'>
+                                    <svg class='copy'>
+                                        <use xlink:href="img/sprite.svg#copy"></use>
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="requesites__item">
+                                <div class="requesites__icon">
+                                    <img src="./img/svg/bank.svg" alt="card" width='25' height='25'>
+                                </div>
+                                <p>Банк получателя: Сбербанк</p>
+                            </li>
+                            <li class="requesites__item">
+                                <div class="requesites__icon">
+                                    <img src="./img/svg/user.svg" alt="card" width='25' height='25'>
+                                </div>
+                                <p>Получатель: Булат У</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <button id='btnOpenManual' class='btn-reset  panel__btn'>Инструкция к оплате</button>
+                    <button class='btn-reset  panel__btn'>Не дошел платеж?</button>
+                </section>
+
+                <section id='panel__manual' class='panel__content panel__manual'>
+                    <span class="panel__title">Инструкция по оплате</span>
+                    <ul class="list-reset manual__items">
+                        <li class="manual__item">
+                            <p>Зайдите в свое банковское приложение</p>
+                        </li>
+                        <li class="manual__item">
+                            <p>Скопируйте номер карты для перевода</p>
+                            <span>4007 8750 1707 4007</span>
+                        </li>
+                        <li class="manual__item">
+                            <p>В банковском приложении выберите перевод по карте</p>
+                        </li>
+                        <li class="manual__item">
+                            <p>Сделайте перевод точной суммы</p>
+                            <span>1000 ₽</span>
+                        </li>
+                        <li class="manual__item">
+                            <p>Дождитесь зачисления средств. Не закрывайте страницу до подтверждения успешной оплаты.</p>
+                        </li>
+                    </ul>
+                    <div class="panel__message">
+                        <p><span>Запрещено:</span> Оплачивать заявку несколькими переводами, а так же неверной суммой. В случае несоблюдений рекомендаций заявка будет отменена, а средства будут утеряны</p>
+                    </div>
+                    <button id='btnCloseManual' class='btn-reset panel__btn'>Закрыть</button>
+                </section>
+
+                <section id='panel__expectation' class='panel__content _active panel__expectation'>
+                    <span class="panel__title">Ожидаем получение реквизитов</span>
+                    <div class="expectation__content">
+                        <span class="expectation__label">Осталось времени</span>
+                        <span id='timerStart' class="expectation__timer">00:18</span>
+                        <p class="expectation__description">Пожалуйста дождитесь загрузки реквизитов</p>
+                    </div>
+                    <button class='btn-reset panel__btn'>Помощь</button>
+                </section>
+
+                <section id='panel__loading' class='panel__content  panel__expectation'>
+                    <span class="panel__title">Загрузка страницы</span>
+                    <div class="loader">
+                        <img src="./img/svg/loader.svg" alt="loader" width='150' height='150'>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+        <script defer>
+			const panels = document.querySelectorAll(".panel__content");
+			const panelLoading = document.querySelector("#panel__loading");
+			const panelManual = document.querySelector("#panel__manual");
+			const panelPay = document.querySelector("#panel__pay");
+			const btnOpenManual = document.querySelector("#btnOpenManual");
+			const btnCloseManual = document.querySelector("#btnCloseManual");
+
+			btnOpenManual.addEventListener('click',()=>{
+				closeActivePanel()
+				panelManual.classList.add('_active')
+			})
+			btnCloseManual.addEventListener('click',()=>{
+				closeActivePanel()
+				panelPay.classList.add('_active')
+			})
+
+			function closeActivePanel(){
+				for (const panel of panels) {
+					panel.classList.remove('_active')
+				}
+			}
+
+
+			let timerInterval
+			const timerElement = document.querySelector("#timer");
+			let endTime = Date.now() + 60 * 60 * 1000
+
+			function updateTimer() {
+            let currentTime = Date.now();
+            let remainingTime = endTime - currentTime;
+
+            if (remainingTime <= 0) {
+                timerElement.textContent = "00:00";
+                console.log("все");
+                clearInterval(timerInterval); // Остановить таймер
+                return;
+            }
+
+            let minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+            // Добавляем ведущие нули
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            timerElement.textContent = `${minutes}:${seconds}`;
+        }
+ 					// Инициализация таймера
+				window.addEventListener('load',()=>{
+					updateTimer();
+				// Обновляем таймер каждую секунду
+					 timerInterval = setInterval(updateTimer, 1000);
+				})
+
+				let timerIntervalStart
+				const timerElementStart = document.querySelector("#timerStart");
+			let endTimeStart = Date.now() + 5 * 1000
+
+			function updateTimerStart() {
+            let currentTime = Date.now();
+            let remainingTime = Math.max(endTimeStart - currentTime, 0);
+
+            if (remainingTime <= 0) {
+                timerElementStart.textContent = "00:00";
+                clearInterval(timerIntervalStart); // Остановить таймер
+								closeActivePanel()
+								panelLoading.classList.add('_active')
+								setTimeout(() => {
+									closeActivePanel()
+									panelPay.classList.add('_active')
+								}, 2000);
+                return;
+            }
+
+            let minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+            // Добавляем ведущие нули
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            timerElementStart.textContent = `${minutes}:${seconds}`;
+        }
+				
+				window.addEventListener('load',()=>{
+					updateTimerStart();
+					timerIntervalStart = setInterval(updateTimerStart, 1000);
+				})
+
+		</script>
+    </body>
+
+</html>
