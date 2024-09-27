@@ -147,30 +147,53 @@
                     <button id='btnCloseManual' class='btn-reset panel__btn'>Закрыть</button>
                 </section>
 
-                <section id='panel__expectation' class='panel__content _active panel__expectation'>
+                <section class='panel__content   panel__expectation'>
                     <span class="panel__title">Ожидаем получение реквизитов</span>
                     <div class="expectation__content">
                         <span class="expectation__label">Осталось времени</span>
-                        <span id='timerStart' class="expectation__timer">00:18</span>
+                        <span class="expectation__timer">00:18</span>
                         <p class="expectation__description">Пожалуйста дождитесь загрузки реквизитов</p>
                     </div>
                     <button class='btn-reset panel__btn'>Помощь</button>
                 </section>
 
-                <section id='panel__loading' class='panel__content  panel__expectation'>
+                <section id='panel__loading' class='panel__content   panel__expectation'>
                     <span class="panel__title">Загрузка страницы</span>
                     <div class="loader">
                         <img src="./img/svg/loader.svg" alt="loader" width='150' height='150'>
                     </div>
                 </section>
 
+                <section id='panel__expectation' class='panel__content _active panel__expectation'>
+                    <span class="panel__title">Решите капчу</span>
+                    <div class="expectation__content">
+                        <span class="expectation__label">Осталось времени</span>
+                        <span id='timerStart' class="expectation__timer">00:18</span>
+                        <div class="g-recaptcha" data-sitekey="ВАШ_SITE_KEY"></div>
+                    </div>
+
+                </section>
+
+                <section id='panelResult' class='panel__content   panel__expectation'>
+                    <span class="panel__title">Статус заказа</span>
+                    <div class="expectation__content">
+                        <p class='order__info'>номер заказа: <span>321969</span></p>
+                        <span class='order__status _success'>Платеж зачислен</span>
+                        <!-- <span class='order__status _error'>Платеж отменен</span> -->
+                    </div>
+                    <button class='btn-reset panel__btn'>вернуться в магазин</button>
+                </section>
+
             </main>
         </div>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script defer>
 			const panels = document.querySelectorAll(".panel__content");
 			const panelLoading = document.querySelector("#panel__loading");
 			const panelManual = document.querySelector("#panel__manual");
 			const panelPay = document.querySelector("#panel__pay");
+			const panelResult = document.querySelector("#panelResult");
+
 			const btnOpenManual = document.querySelector("#btnOpenManual");
 			const btnCloseManual = document.querySelector("#btnCloseManual");
 
@@ -192,7 +215,7 @@
 
 			let timerInterval
 			const timerElement = document.querySelector("#timer");
-			let endTime = Date.now() + 60 * 60 * 1000
+			let endTime = Date.now() + 60  * 1000
 
 			function updateTimer() {
             let currentTime = Date.now();
@@ -200,8 +223,13 @@
 
             if (remainingTime <= 0) {
                 timerElement.textContent = "00:00";
-                console.log("все");
                 clearInterval(timerInterval); // Остановить таймер
+								closeActivePanel()
+								panelLoading.classList.add('_active')
+								setTimeout(() => {
+									closeActivePanel()
+									panelResult.classList.add('_active')
+								}, 2000);
                 return;
             }
 
